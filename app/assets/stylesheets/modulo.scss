@@ -1,0 +1,20 @@
+/*Declaración de variables*/
+$fuente_tipo: 'Times New Roman', Times, serif;
+$fuente_titulo: 16px;
+$fuente_sub: 16px;
+$negro: black;
+$crema: #FFFDD0;
+$blanco: white;
+$rojo: red;
+$central: center;
+$gris: silver;
+
+/*Creando el mixin*/
+@mixin tabla_estilos{
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+@function doble($tamaño){
+    @return $tamaño *2;
+}

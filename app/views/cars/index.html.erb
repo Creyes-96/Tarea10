@@ -1,0 +1,36 @@
+
+<link rel="stylesheet" href="Tarea4\app\assets\stylesheets\cars.scss">
+<p id="notice"><%= notice %></p>
+<body class=bcars>
+<h1 class="main_title">Cars</h1>
+<h1 class="sub_title">Carlos Reyes</h1>
+<table>
+  <thead>
+    <tr>
+      <th class="encabezado">Model</th>
+      <th class="encabezado">Brand</th>
+      <th class="encabezado">Driver</th>
+      <th class="encabezado">Code</th>
+      <th class="encabezado">Actions</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td class="registro"><%= car.model %></td>
+        <td class="registro"><%= car.brand %></td>
+        <td class="registro"><%= car.driver_id %></td>
+        <td class="registro"><%= car.code %></td>
+        <td><%= link_to 'Show', car %></td>
+        <td><%= link_to 'Edit', edit_car_path(car) %></td>
+        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+
+<%= link_to 'New Car', new_car_path %>
+</body>

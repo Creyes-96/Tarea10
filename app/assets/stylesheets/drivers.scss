@@ -1,0 +1,25 @@
+// Place all the styles related to the drivers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'modulo';
+
+h1{
+    font-size: $fuente_titulo;
+    margin-bottom: 15px;
+}
+
+table{
+    @include tabla_estilos();
+    tr{
+        background-color: $crema;
+        th{
+            padding: 15px;
+            font-size: $fuente_titulo;
+            color: $rojo;
+            background-color: $negro;
+        }
+        td{
+            text-align: $central;
+        }
+    }
+}

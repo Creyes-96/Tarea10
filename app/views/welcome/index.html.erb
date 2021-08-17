@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Tarea #4</title>
+</head>
+<nav class="navegador">
+    <ul>
+        <li><%= link_to 'Carros', cars_path%></li>
+        <li><%= link_to 'Conductures', drivers_path%></li>
+    </ul> 
+    <!--<%= link_to 'Google', "https://www.google.com/"%>-->
+</nav>
+<body>
+    <div class="contenedor">
+        <div class="subcontenedor">
+            <h1 class="titulo_principal">¿Qué he aprendido?</h1>
+            <p>He aprendido cómo crear proyectos de Ruby, generar scaffolds y apartir de esos generar migraciones. Estoy de igual forma, aprendiendo la estructura básica de SASS y cómo implementar Bulma al proyecto. Me gustaría seguir aprendiendo un poco de todo e ir afinando mis conocimientos sobre todas las herramientas que se usan para realizar un proyecto en la empresa Lomax Technologies.</p>
+            <%= image_tag("portada.png", :alt => "Foto de perfil") %>
+            <!--<img src="Tarea4\app\assets\images\FotoPerfil.jpg" alt="" width="50" height="50">-->
+            <button class="button is-light is-info"><%= link_to 'Conoce más sobre mí', "https://carlosreyes96.github.io/CarlosReyes-Portafolio/"%></button>
+        </div>
+    </div>
+    <footer class="piePagina">  
+        <p>@Copyright Lomax Technologies 2021 - All Right Reserved. <p>  
+    </footer> 
+</body> 
+</html>

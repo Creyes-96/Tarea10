@@ -1,0 +1,21 @@
+postgresql: &postgresql
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  timeout: 5000  
+  username: postgres
+  password: 123456
+
+development:
+  <<: *postgresql
+  database: tarea3_dev 
+
+test:
+  <<: *postgresql
+  database: tarea3_test  
+
+production:
+  <<: *postgresql
+  database: production
+  

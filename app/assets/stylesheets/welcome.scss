@@ -1,0 +1,60 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'modulo';
+.navegador ul{
+    height: 50px;
+    background-color: #303790;
+    display: flex;
+    width: 100%;
+}
+
+button{
+    width: 100%;
+}
+
+.navegador li{
+    padding: 10px;
+    height: 50px;
+}
+
+.navegador li:hover{
+    background-color: white;
+}
+
+.contenedor{
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+.subcontenedor{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.subcontenedor h1{
+    text-align: center;
+    box-shadow: gainsboro;
+}
+
+footer{
+    background-color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+footer p{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/*Usando la función DOBLE en mi titulo h1*/
+
+.titulo_principal{
+    font-size: doble($fuente_titulo);
+}

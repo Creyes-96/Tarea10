@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: 1
+  brand: MyString
+  driver_id: 1
+
+two:
+  model: 1
+  brand: MyString
+  driver_id: 1

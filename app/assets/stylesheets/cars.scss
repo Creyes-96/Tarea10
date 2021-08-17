@@ -1,0 +1,38 @@
+// Place all the styles related to the cars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+
+@import 'modulo';
+
+.main_title{
+    font-size: $fuente_titulo;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/*Utilizando el @extend*/
+.sub_tile{
+    @extend .main_title;
+}
+
+/*nesting*/
+table{
+    /*implementando el mixin*/
+    @include tabla_estilos();
+    tr{
+        background-color: $crema;
+        th{
+            padding: 15px;
+            font-size: $fuente_titulo;
+            color: $rojo;
+            background-color: $negro;
+        }
+        td{
+            text-align: $central;
+        }
+    }
+}
+
+
+
