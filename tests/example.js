@@ -30,6 +30,7 @@ function demo(browserType = "chromium") {
 
         //fill inputs
         //Comentario de prueba y otras cosas de github
+        //Comentario de prueba para commit y push con Git Bash
         page.fill(`#car_model`, '4000')
         await page.waitForTimeout(200);
         page.fill(`#car_brand`, 'Tesla')
