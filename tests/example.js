@@ -29,6 +29,7 @@ function demo(browserType = "chromium") {
         await page.waitForTimeout(2000)
 
         //fill inputs
+        //Comentario de prueba y otras cosas de github
         page.fill(`#car_model`, '4000')
         await page.waitForTimeout(200);
         page.fill(`#car_brand`, 'Tesla')
