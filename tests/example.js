@@ -1,5 +1,6 @@
 const playwright = require("playwright")
 const config = require("../config/development2.js")
+var faker = require('faker');
 
 function demo(browserType = "chromium") {
     (async () => {
@@ -29,16 +30,14 @@ function demo(browserType = "chromium") {
         await page.waitForTimeout(2000)
 
         //fill inputs
-        //Comentario de prueba y otras cosas de github
-        //Comentario de prueba para commit y push con Git Bash
-        //comentario de prueba vs code con token
-        //Uso de token
-        //Token nuevo
-        page.fill(`#car_model`, '4000')
+        
+        page.fill(`#car_model`, '4042');
         await page.waitForTimeout(200);
-        page.fill(`#car_brand`, 'Tesla')
+        //page.fill(`#car_brand`, 'Brand')
+        page.fill(`#car_brand`, faker.vehicle.manufacturer())
         await page.waitForTimeout(200);
-        page.fill(`#car_driver_id`, '1')
+        page.fill(`#car_driver_id`, '100')
+        //page.fill(`#car_driver_id`, faker.datatype.hexaDecimal())
         await page.waitForTimeout(200);
         page.fill(`#car_code`, '1')
         await page.waitForTimeout(200);
@@ -49,6 +48,31 @@ function demo(browserType = "chromium") {
 
         //go to cars index
         await page.goto(config.url.base_path + '/cars')
+
+        /*MAS DATOS MAS DATOS MAS DATOS
+        await page.click('text=New Car');
+
+        await page.goto(config.url.base_path + '/cars/new')
+        await page.waitForLoadState();
+        await page.waitForTimeout(2000)
+
+        //fill inputs
+        page.fill(`#car_model`, '4042' );
+        await page.waitForTimeout(200);
+        //page.fill(`#car_brand`, 'Brand')
+        page.fill(`#car_brand`, faker.vehicle.manufacturer())
+        await page.waitForTimeout(200);
+        page.fill(`#car_driver_id`, faker.datatype.hexaDecimal())
+        await page.waitForTimeout(200);
+        page.fill(`#car_code`, '1')
+        await page.waitForTimeout(200);
+
+        page.click('input[name=commit]') //create car
+        await page.waitForTimeout();
+        await page.waitForTimeout(2000);
+
+        //go to cars index
+        await page.goto(config.url.base_path + '/cars')*/
     })()
 }
 
