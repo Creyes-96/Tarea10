@@ -33,6 +33,7 @@ function demo(browserType = "chromium") {
         //Comentario de prueba para commit y push con Git Bash
         //comentario de prueba vs code con token
         //Uso de token
+        //Token nuevo
         page.fill(`#car_model`, '4000')
         await page.waitForTimeout(200);
         page.fill(`#car_brand`, 'Tesla')
